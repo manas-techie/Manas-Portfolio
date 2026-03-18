@@ -2,37 +2,43 @@ import { useState, useCallback } from "react";
 import "./styles/Work.css";
 import WorkImage from "./WorkImage";
 import { MdArrowBack, MdArrowForward } from "react-icons/md";
+import { FaGithub } from "react-icons/fa";
 
 const projects = [
   {
-    title: "Solid Starters",
-    category: "Low-Code Platform",
-    tools: "Angular, Next.js, NestJS, MongoDB",
-    image: "/images/Solidx.png",
+    title: "AHHAR",
+    category: "AI Powered Smart Restaurant Management System",
+    tools: "ejs, Node.js, Express.js, MongoDB",
+    image: "/images/ahaar.png",
+    github: "https://github.com/manas-techie/AHAAR.git",
   },
   {
     title: "Radix",
     category: "E-Commerce",
     tools: "Angular, Next.js, NestJS, CMS",
     image: "/images/radix.png",
+    github: "https://github.com/yourusername/radix",
   },
   {
     title: "Bond Cancellation",
     category: "Import-Export Automation",
     tools: "Angular, Next.js, NestJS, Workflows",
     image: "/images/bond.png",
+    github: "https://github.com/yourusername/bond-cancellation",
   },
   {
     title: "Sapphire",
     category: "CRM Platform",
     tools: "AngularJS, NestJS, PostgreSQL",
     image: "/images/sapphire.png",
+    github: "https://github.com/yourusername/sapphire",
   },
   {
     title: "Mpro",
     category: "Insurance Platform",
     tools: "React.js, Node.js, Microservices",
     image: "/images/Maxlife.png",
+    github: "https://github.com/yourusername/mpro",
   },
 ];
 
@@ -112,6 +118,16 @@ const Work = () => {
                           <span className="tools-label">Tools & Features</span>
                           <p>{project.tools}</p>
                         </div>
+                        <a
+                          href={project.github}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="github-link"
+                          data-cursor="disable"
+                        >
+                          <FaGithub />
+                          <span>View on GitHub</span>
+                        </a>
                       </div>
                     </div>
                     <div className="carousel-image-wrapper">

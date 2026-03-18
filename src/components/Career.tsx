@@ -5,7 +5,7 @@ const Career = () => {
     <div className="career-section section-container">
       <div className="career-container">
         <h2>
-          My career <span>&</span>
+          My Education <span>&</span>
           <br /> experience
         </h2>
         <div className="career-info">
@@ -15,43 +15,25 @@ const Career = () => {
           <div className="career-info-box">
             <div className="career-info-in">
               <div className="career-role">
-                <h4>Full Stack Developer</h4>
-                <h5>Ikshan</h5>
+                <h4>B.tech(AI&ML)</h4>
+                <h5>University of Engineering and Management</h5>
               </div>
-              <h3>2020</h3>
+              <h3>ongoing</h3>
             </div>
             <p>
-              Built 6+ complete applications using React.js. Integrated backend
-              authentication using Node.js & MongoDB. Created responsive UI/UX
-              and designed wireframes using Figma.
+              Pursuing a B.Tech degree with a specialization in Artificial Intelligence and Machine Learning. Gained a strong foundation in computer science principles, algorithms, and programming languages. Engaged in projects and coursework focused on AI and ML concepts, preparing for a career in the tech industry.
             </p>
           </div>
           <div className="career-info-box">
             <div className="career-info-in">
               <div className="career-role">
-                <h4>Senior Full Stack Developer</h4>
-                <h5>Monocept (Max Life Insurance)</h5>
+                <h4>Mern Stack Intern</h4>
+                <h5>Webstack Acedemmy</h5>
               </div>
-              <h3>2021</h3>
+              <h3>2026</h3>
             </div>
             <p>
-              Led two development teams on Mpro, a large-scale insurance
-              operations platform. Developed multiple modules using React.js &
-              migrated critical functionalities to Node.js microservices.
-            </p>
-          </div>
-          <div className="career-info-box">
-            <div className="career-info-in">
-              <div className="career-role">
-                <h4>Full Stack Developer</h4>
-                <h5>Logic Loop</h5>
-              </div>
-              <h3>NOW</h3>
-            </div>
-            <p>
-              Building Solid, a proprietary low-code platform using Angular,
-              Next.js & NestJS. Delivering production-ready CMS-based projects
-              including e-commerce, CRM, and import-export automation systems.
+              Gained hands-on experience in building full-stack web applications using the MERN stack. Collaborated with cross-functional teams to design and implement scalable solutions. Developed a strong understanding of modern web development practices and technologies.
             </p>
           </div>
         </div>

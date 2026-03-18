@@ -9,37 +9,36 @@ const projects = [
     title: "AHHAR",
     category: "AI Powered Smart Restaurant Management System",
     tools: "ejs, Node.js, Express.js, MongoDB",
-    image: "/images/ahaar.png",
+    image: "/images/ahaar.jpg",
     github: "https://github.com/manas-techie/AHAAR.git",
+    highlights: [
+      "AI-powered menu recommendations",
+      "Real-time order tracking dashboard",
+      "Inventory management with smart alerts",
+    ],
   },
   {
-    title: "Radix",
-    category: "E-Commerce",
-    tools: "Angular, Next.js, NestJS, CMS",
-    image: "/images/radix.png",
-    github: "https://github.com/yourusername/radix",
+    title: "Q-Entry",
+    category: "Smart Hostel Gate Management System",
+    tools: "React.js, Context API",
+    image: "/images/q-entry.jpg",
+    github: "https://github.com/manas-techie/Q-Entry.git",
+    highlights: [
+      "QR-based, paperless gate pass",
+      "Automatic real-time IN/OUT tracking",
+      "Admin control + full audit trail"
+    ],
   },
   {
-    title: "Bond Cancellation",
-    category: "Import-Export Automation",
-    tools: "Angular, Next.js, NestJS, Workflows",
-    image: "/images/bond.png",
-    github: "https://github.com/yourusername/bond-cancellation",
-  },
-  {
-    title: "Sapphire",
-    category: "CRM Platform",
-    tools: "AngularJS, NestJS, PostgreSQL",
-    image: "/images/sapphire.png",
-    github: "https://github.com/yourusername/sapphire",
-  },
-  {
-    title: "Mpro",
-    category: "Insurance Platform",
-    tools: "React.js, Node.js, Microservices",
-    image: "/images/Maxlife.png",
-    github: "https://github.com/yourusername/mpro",
-  },
+    title: "Fabriq",
+    category: "E-Commerce Platform",
+    tools: "React.js, Node.js,Express.js,MongoDB",
+    image: "/images/fabriq.jpg",
+    github: "https://github.com/manas-techie/FABRIQ.git",
+    highlights: [
+      "Currently Working On It"
+    ],
+  }
 ];
 
 const Work = () => {
@@ -118,6 +117,16 @@ const Work = () => {
                           <span className="tools-label">Tools & Features</span>
                           <p>{project.tools}</p>
                         </div>
+                        {project.highlights && project.highlights.length > 0 && (
+                          <div className="carousel-highlights">
+                            <span className="highlights-label">Key Highlights</span>
+                            <ul>
+                              {project.highlights.map((point, i) => (
+                                <li key={i}>{point}</li>
+                              ))}
+                            </ul>
+                          </div>
+                        )}
                         <a
                           href={project.github}
                           target="_blank"

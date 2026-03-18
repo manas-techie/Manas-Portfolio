@@ -114,6 +114,7 @@
   gap: 8px;
   margin-top: 20px;
   padding: 10px 20px;
+  width: fit-content;
   font-size: 14px;
   font-weight: 500;
   color: #eae5ec;
@@ -136,6 +137,49 @@
 
 .github-link svg {
   font-size: 18px;
+}
+
+/* ── Highlights ── */
+.carousel-highlights {
+  margin-top: 16px;
+}
+
+.carousel-highlights .highlights-label {
+  font-size: 14px;
+  font-weight: 400;
+  opacity: 0.6;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.carousel-highlights ul {
+  list-style: none;
+  padding: 0;
+  margin: 8px 0 0;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.carousel-highlights li {
+  position: relative;
+  padding-left: 16px;
+  font-size: 14px;
+  font-weight: 300;
+  color: #c5c3c3;
+  line-height: 1.5;
+}
+
+.carousel-highlights li::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 8px;
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: var(--accentColor);
+  opacity: 0.7;
 }
 
 .carousel-image-wrapper {

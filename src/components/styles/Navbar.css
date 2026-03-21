@@ -13,15 +13,16 @@
   z-index: 9999;
 }
 .header ul {
-  font-size: 12px;
+  font-size: 11px;
   display: flex;
   flex-direction: column;
   margin: 0;
   padding: 0;
   list-style: none;
-  column-gap: 40px;
-  row-gap: 8px;
+  column-gap: 20px;
+  row-gap: 6px;
   align-items: end;
+  flex-wrap: wrap;
 }
 .header ul li {
   margin-left: 0px;
@@ -52,10 +53,20 @@
   .header ul {
     flex-direction: row;
     align-items: center;
-    font-size: 14px;
+    font-size: 11px;
+    column-gap: 18px;
   }
   .header ul li {
     color: #eae5ec;
+  }
+  .navbar-title {
+    font-size: 14px;
+  }
+}
+@media only screen and (min-width: 768px) {
+  .header ul {
+    font-size: 12px;
+    column-gap: 22px;
   }
   .navbar-title {
     font-size: 16px;
@@ -64,6 +75,11 @@
 @media only screen and (min-width: 900px) {
   .navbar-connect {
     display: block;
+    font-size: 14px;
+  }
+  .header ul {
+    font-size: 11px;
+    column-gap: 16px;
   }
 }
 @media only screen and (min-width: 1200px) {
@@ -71,13 +87,22 @@
     padding: 35px 0px;
   }
   .header ul {
-    column-gap: 80px;
-    font-size: 16px;
+    column-gap: 30px;
+    font-size: 13px;
   }
   .navbar-connect {
-    font-size: 16px;
+    font-size: 15px;
   }
   .navbar-title {
     font-size: 18px;
+  }
+}
+@media only screen and (min-width: 1500px) {
+  .header ul {
+    column-gap: 45px;
+    font-size: 15px;
+  }
+  .navbar-connect {
+    font-size: 16px;
   }
 }

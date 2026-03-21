@@ -1,4 +1,4 @@
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import HoverLinks from "./HoverLinks";
 import { gsap } from "gsap";
@@ -9,6 +9,8 @@ gsap.registerPlugin(ScrollSmoother, ScrollTrigger);
 export let smoother: ScrollSmoother;
 
 const Navbar = () => {
+  const [menuOpen, setMenuOpen] = useState(false);
+
   useEffect(() => {
     smoother = ScrollSmoother.create({
       wrapper: "#smooth-wrapper",
@@ -39,6 +41,11 @@ const Navbar = () => {
       ScrollSmoother.refresh(true);
     });
   }, []);
+
+  const handleLinkClick = () => {
+    setMenuOpen(false);
+  };
+
   return (
     <>
       <div className="header">
@@ -54,39 +61,57 @@ const Navbar = () => {
         >
           manas.codewritter@gmail.com
         </a>
-        <ul>
+        <button
+          className={`nav-toggle ${menuOpen ? "nav-toggle-active" : ""}`}
+          onClick={() => setMenuOpen(!menuOpen)}
+          aria-label="Toggle navigation"
+          data-cursor="disable"
+        >
+          <span className="nav-toggle-bar"></span>
+          <span className="nav-toggle-bar"></span>
+          <span className="nav-toggle-bar"></span>
+        </button>
+        <ul className={menuOpen ? "nav-open" : ""}>
           <li>
-            <a data-href="#about" href="#about">
+            <a data-href="#about" href="#about" onClick={handleLinkClick}>
               <HoverLinks text="ABOUT" />
             </a>
           </li>
           <li>
-            <a data-href="#whatido" href="#whatido">
+            <a data-href="#whatido" href="#whatido" onClick={handleLinkClick}>
               <HoverLinks text="SKILLS" />
             </a>
           </li>
           <li>
-            <a data-href="#career" href="#career">
+            <a data-href="#career" href="#career" onClick={handleLinkClick}>
               <HoverLinks text="CAREER" />
             </a>
           </li>
           <li>
-            <a data-href="#certificates" href="#certificates">
+            <a
+              data-href="#certificates"
+              href="#certificates"
+              onClick={handleLinkClick}
+            >
               <HoverLinks text="AWARDS" />
             </a>
           </li>
           <li>
-            <a data-href="#work" href="#work">
+            <a data-href="#work" href="#work" onClick={handleLinkClick}>
               <HoverLinks text="WORK" />
             </a>
           </li>
           <li>
-            <a data-href="#techstack" href="#techstack">
+            <a
+              data-href="#techstack"
+              href="#techstack"
+              onClick={handleLinkClick}
+            >
               <HoverLinks text="TECH" />
             </a>
           </li>
           <li>
-            <a data-href="#contact" href="#contact">
+            <a data-href="#contact" href="#contact" onClick={handleLinkClick}>
               <HoverLinks text="CONTACT" />
             </a>
           </li>

@@ -3,6 +3,7 @@
   max-width: var(--cMaxWidth);
   width: var(--cWidth);
   justify-content: space-between;
+  align-items: center;
   padding: 20px 0px;
   margin-bottom: -100px;
   box-sizing: border-box;
@@ -12,25 +13,98 @@
   top: 0;
   z-index: 9999;
 }
+
+/* ── Nav links ── */
 .header ul {
   font-size: 11px;
   display: flex;
   flex-direction: column;
   margin: 0;
-  padding: 0;
+  padding: 16px 0;
   list-style: none;
-  column-gap: 20px;
-  row-gap: 6px;
-  align-items: end;
-  flex-wrap: wrap;
+  gap: 10px;
+  align-items: center;
+  position: absolute;
+  top: 100%;
+  right: 0;
+  background: rgba(10, 14, 23, 0.95);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid rgba(94, 234, 212, 0.1);
+  border-radius: 12px;
+  padding: 20px 30px;
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(-10px);
+  transition:
+    opacity 0.3s ease,
+    transform 0.3s ease,
+    visibility 0.3s;
 }
+
+.header ul.nav-open {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
+}
+
 .header ul li {
   margin-left: 0px;
   letter-spacing: 1px;
-  color: #ccc;
+  color: #eae5ec;
   font-weight: 600;
   cursor: pointer;
 }
+
+/* ── Hamburger toggle ── */
+.nav-toggle {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 5px;
+  width: 36px;
+  height: 36px;
+  background: none;
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  border-radius: 8px;
+  cursor: pointer;
+  padding: 6px;
+  z-index: 10001;
+  transition: border-color 0.3s ease;
+}
+
+.nav-toggle:hover {
+  border-color: var(--accentColor);
+}
+
+.nav-toggle-bar {
+  display: block;
+  width: 20px;
+  height: 2px;
+  background-color: #eae5ec;
+  border-radius: 2px;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  transform-origin: center;
+}
+
+/* X animation */
+.nav-toggle-active .nav-toggle-bar:nth-child(1) {
+  transform: translateY(7px) rotate(45deg);
+  background-color: var(--accentColor);
+}
+
+.nav-toggle-active .nav-toggle-bar:nth-child(2) {
+  opacity: 0;
+  transform: scaleX(0);
+}
+
+.nav-toggle-active .nav-toggle-bar:nth-child(3) {
+  transform: translateY(-7px) rotate(-45deg);
+  background-color: var(--accentColor);
+}
+
+/* ── Other navbar elements ── */
 .navbar-connect {
   position: absolute;
   display: none;
@@ -41,67 +115,99 @@
   letter-spacing: 1px;
   font-weight: 500;
 }
+
 .navbar-title {
   font-weight: 700;
   font-size: 14px;
   letter-spacing: 0.2px;
+  white-space: nowrap;
 }
-@media only screen and (min-width: 500px) {
-  .header {
-    padding: 20px 0px;
+
+/* ═══════════════════════════════
+   RESPONSIVE BREAKPOINTS
+   ═══════════════════════════════ */
+
+/* ≥ 768px — show inline nav, hide hamburger */
+@media only screen and (min-width: 768px) {
+  .nav-toggle {
+    display: none;
   }
+
   .header ul {
+    position: static;
     flex-direction: row;
     align-items: center;
+    background: none;
+    backdrop-filter: none;
+    -webkit-backdrop-filter: none;
+    border: none;
+    border-radius: 0;
+    padding: 0;
+    opacity: 1;
+    visibility: visible;
+    transform: none;
+    transition: none;
     font-size: 11px;
-    column-gap: 18px;
+    gap: 16px;
   }
-  .header ul li {
-    color: #eae5ec;
-  }
+
   .navbar-title {
-    font-size: 14px;
+    font-size: 15px;
   }
 }
-@media only screen and (min-width: 768px) {
-  .header ul {
-    font-size: 12px;
-    column-gap: 22px;
-  }
-  .navbar-title {
-    font-size: 16px;
-  }
-}
+
+/* ≥ 900px — show email */
 @media only screen and (min-width: 900px) {
   .navbar-connect {
     display: block;
-    font-size: 14px;
+    font-size: 13px;
   }
+
   .header ul {
-    font-size: 11px;
-    column-gap: 16px;
+    font-size: 10px;
+    gap: 12px;
   }
 }
+
+/* ≥ 1100px */
+@media only screen and (min-width: 1100px) {
+  .header ul {
+    gap: 20px;
+    font-size: 12px;
+  }
+
+  .navbar-connect {
+    font-size: 14px;
+  }
+}
+
+/* ≥ 1200px */
 @media only screen and (min-width: 1200px) {
   .header {
     padding: 35px 0px;
   }
+
   .header ul {
-    column-gap: 30px;
+    gap: 28px;
     font-size: 13px;
   }
+
   .navbar-connect {
     font-size: 15px;
   }
+
   .navbar-title {
     font-size: 18px;
   }
 }
+
+/* ≥ 1500px — spacious */
 @media only screen and (min-width: 1500px) {
   .header ul {
-    column-gap: 45px;
+    gap: 40px;
     font-size: 15px;
   }
+
   .navbar-connect {
     font-size: 16px;
   }

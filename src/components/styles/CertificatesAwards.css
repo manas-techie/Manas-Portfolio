@@ -199,5 +199,40 @@
     place-items: inherit;
     justify-content: left;
     padding-top: 40px;
+    padding-bottom: 40px;
+    margin-bottom: 50px;
+  }
+}
+
+@media only screen and (max-width: 400px) {
+  .certificates-section h2 {
+    font-size: 32px;
+    line-height: 34px;
+    margin-bottom: 30px;
+  }
+
+  .certificate-card {
+    padding: 20px 16px;
+  }
+
+  .certificate-icon {
+    width: 40px;
+    height: 40px;
+    font-size: 18px;
+    margin-bottom: 14px;
+  }
+
+  .certificate-card h4 {
+    font-size: 17px;
+    line-height: 22px;
+  }
+
+  .certificate-card h5 {
+    font-size: 13px;
+  }
+
+  .certificate-card p {
+    font-size: 13px;
+    line-height: 20px;
   }
 }

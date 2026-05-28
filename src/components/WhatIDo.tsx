@@ -127,7 +127,7 @@ const WhatIDo = () => {
             </div>
             <div className="what-corner"></div>
             <div className="what-content-in">
-              <h3>AIML Learner</h3>
+              <h3>AI&ML</h3>
               <h4>I build intelligent applications.</h4>
               <p>
                 I learn to design and implement machine learning models and AI solutions. From data analysis to predictive modeling, I create intelligent applications that drive business value.

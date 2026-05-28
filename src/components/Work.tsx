@@ -6,6 +6,30 @@ import { FaGithub } from "react-icons/fa";
 
 const projects = [
   {
+    title: "MEALDASH",
+    category: "AI Powered Smart Restaurant Management System",
+    tools: "React.js, Node.js, Express.js, MongoDB, Generative AI",
+    image: "/images/mealdash.jpg",
+    github: "https://github.com/manas-techie/MealDash.git",
+    highlights: [
+      "AI-powered food delivery optimization",
+      "Real-time kitchen order management system",
+      "Customer review and rating analytics features",
+    ],
+  },
+  {
+    title: "Full-Stack E-Commerce Platform",
+    category: "E-Commerce Platform",
+    tools: "React.js, Node.js, Express.js, MongoDB",
+    image: "/images/ecommerce.jpg",
+    github: "https://github.com/manas-techie/ecommerce.git",
+    highlights: [
+      "Full-stack e-commerce solution with React frontend and Node.js backend",
+        "User authentication and profile management",
+        "OTP-based password reset and signup functionality for enhanced security",
+    ],
+  },
+  {
     title: "AHHAR",
     category: "AI Powered Smart Restaurant Management System",
     tools: "ejs, Node.js, Express.js, MongoDB",

@@ -3,7 +3,7 @@ import "./styles/CertificatesAwards.css";
 const certificates = [
   {
     icon: "📜",
-    title: "Backend Development",
+    title: "Explore Web Development with Node.js",
     organization: "LinkedIn",
     year: "2026",
     description:
@@ -21,7 +21,7 @@ const certificates = [
     icon: "⭐",
     title: "Top 5% in my year",
     organization: "UEM",
-    year: "2025",
+    year: "2024 - 2026",
     description:
       "Recognized for outstanding academic performance and maintaining a top GPA in the department.",
   },
@@ -32,6 +32,27 @@ const certificates = [
     year: "2026",
     description:
       "Earned certification in advanced React concepts including hooks, state management, and performance optimization.",
+  },
+  {
+    icon: "🤖",
+    title: "Generative AI: Introduction and Applications",
+    organization: "Coursera",
+    year: "2026",
+    description:"Completed comprehensive training in generative AI techniques, including GANs and transformer models, with practical applications in content creation and data augmentation.",
+  },
+  {
+    icon: "📊",
+    title: "Introduction to Machine Learning",
+    organization: "NPTEL",
+    year: "2026",
+    description:"Completed comprehensive training in machine learning fundamentals, including supervised and unsupervised learning, with practical applications in Python.",
+  },
+  {
+    icon: "📚",
+    title: "The Complete Full-Stack Web Development Bootcamp",
+    organization: "Udemy",
+    year: "2025",
+    description:"Completed an intensive full-stack web development bootcamp covering HTML, CSS, JavaScript, React, Node.js, and MongoDB.",
   },
 ];
 

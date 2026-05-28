@@ -53,13 +53,13 @@ const Navbar = () => {
           MANAS SIDH
         </a>
         <a
-          href="https://mail.google.com/mail/?view=cm&to=manas.codewritter@gmail.com"
+          href="https://mail.google.com/mail/?view=cm&to=manas.sidh05@gmail.com"
           target="_blank"
           rel="noopener noreferrer"
           className="navbar-connect"
           data-cursor="disable"
         >
-          manas.codewritter@gmail.com
+          manas.sidh05@gmail.com
         </a>
         <button
           className={`nav-toggle ${menuOpen ? "nav-toggle-active" : ""}`}
